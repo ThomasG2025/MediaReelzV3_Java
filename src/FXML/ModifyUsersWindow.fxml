@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="updateUsersPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #966EC8;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.ModifyUsersWindowController">
+   <children>
+      <Label fx:id="newUserKeyLabel" layoutX="165.0" layoutY="250.0" text="New UserKey" />
+      <Label fx:id="updateUserLabel" layoutX="300.0" layoutY="69.0" text="Update User">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="updateUserUserKeyLabel" layoutX="200.0" layoutY="150.0" text="UserKey" />
+      <Label fx:id="confirmNewUserKeyLabel" layoutX="119.0" layoutY="350.0" text="Confirm New UserKey" />
+      <TextField fx:id="userKeyTextField" layoutX="259.0" layoutY="146.0" />
+      <TextField fx:id="newUserKeyTextField" layoutX="259.0" layoutY="246.0" />
+      <TextField fx:id="confirmNewUserKeyTextField" layoutX="259.0" layoutY="346.0" />
+      <PasswordField fx:id="userKeyPasswordField" layoutX="259.0" layoutY="146.0" />
+      <PasswordField fx:id="newUserKeyPasswordField" layoutX="259.0" layoutY="246.0" />
+      <PasswordField fx:id="confirmNewUserKeyPasswordField" layoutX="259.0" layoutY="346.0" />
+      <CheckBox fx:id="showUserKeyCheckBox" layoutX="434.0" layoutY="150.0" mnemonicParsing="false" onAction="#showUserKeyText" text="Show UserKey" />
+      <CheckBox fx:id="showNewUserKeyBox" layoutX="434.0" layoutY="250.0" mnemonicParsing="false" onAction="#showNewUserKeyText" text="Show New UserKey" />
+      <CheckBox fx:id="showConfirmNewUserKeyCheckBox" layoutX="434.0" layoutY="350.0" mnemonicParsing="false" onAction="#showConfirmNewUserKeyText" text="Show Confirm New UserKey" />
+      <Button fx:id="updateUserButton" layoutX="195.0" layoutY="458.0" mnemonicParsing="false" onAction="#updateUserHash" style="-fx-background-color: #6C5180;" text="Update User" textFill="WHITE" />
+      <Button fx:id="deleteUserButton" layoutX="415.0" layoutY="458.0" mnemonicParsing="false" onAction="#getUserReelIdsForUserDeletion" style="-fx-background-color: #6C5180;" text="Delete User" textFill="WHITE" />
+   </children>
+</Pane>

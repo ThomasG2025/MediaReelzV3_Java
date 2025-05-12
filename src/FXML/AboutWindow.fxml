@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="745.0" style="-fx-background-color: #966EC8;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.AboutWindowController">
+   <children>
+      <Label fx:id="aboutLabel" layoutX="345.0" layoutY="20.0" text="About">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="aboutTextArea" layoutX="50.0" layoutY="70.0" prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: #966EC8;" text="&#10;                                                                         What is  media reelzs?&#10;&#10;   &#10;       Media Reelz is a  program to help users keep track of the  physical media they own and the ones that they want.&#10;       &#10;       Each reel  must has the name, artist, year , type, genre, location name, location page number, location page size&#10;        and location slot number while also having the ability to add a note  and set whether you own the reel &#10;        or want the  reel.&#10;       &#10;        There is also a bulk import feature that allows for easier  loading of big collections( Via csv files). &#10;&#10;       media  reelzs also features:&#10;&#10;        Strong security to keep your data safe.&#10;&#10;        dyanmic searching with 8 filters&#10;&#10;        ability to export your reelzs to take on the go ( via csv file) which can also be used to &#10;      import into the program if you  change computers one import and all your reelzs will be there.&#10;&#10;        &#10;       The Name media reelzs was chosen was because one of the  oldest forms of physical media is the film reel.&#10;                                                   &#10;       This is just version 1.0 more features may be  coming soon.&#10;                                                      &#10;                                                             &#10;                                                          Regards Thomas Gustafson" />
+   </children>
+</Pane>

@@ -9,5 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sqlite-jdbc-3.49.1.0" level="project" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="jna-5.10.0" level="project" />
+    <orderEntry type="library" exported="" name="Argon 2" level="project" />
   </component>
 </module>

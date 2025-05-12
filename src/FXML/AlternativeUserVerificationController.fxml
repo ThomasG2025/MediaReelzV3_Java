@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="600.0" style="-fx-background-color: #966EC8;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.AlternativeUserVerificationController">
+    <children>
+        <Label fx:id="verifyUserForRecoveryLabel" layoutX="230.0" layoutY="63.0" text="verify user for recovery">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+        <TextField fx:id="securityQuestion1" layoutX="161.0" layoutY="138.0" prefHeight="25.0" prefWidth="279.0" />
+        <TextField fx:id="recoveryAnswer1" layoutX="161.0" layoutY="221.0" prefHeight="25.0" prefWidth="279.0" />
+        <TextField fx:id="securityQuestion2" layoutX="161.0" layoutY="303.0" prefHeight="25.0" prefWidth="279.0" />
+        <TextField fx:id="recoveryAnswer2" layoutX="161.0" layoutY="375.0" prefHeight="25.0" prefWidth="279.0" />
+        <TextField fx:id="securityQuestion3" layoutX="151.0" layoutY="446.0" prefHeight="25.0" prefWidth="279.0" />
+        <TextField fx:id="recoveryAnswer3" layoutX="151.0" layoutY="527.0" prefHeight="25.0" prefWidth="279.0" />
+        <Label fx:id="securityQuestion1Label" layoutX="45.0" layoutY="142.0" text="Security Question 1" />
+        <Label fx:id="securityQuestion2Label" layoutX="36.0" layoutY="307.0" text="Security Question 2" />
+        <Label fx:id="securityQuestion3Label" layoutX="38.0" layoutY="450.0" text="Security Question 3" />
+        <Label fx:id="answer1Label" layoutX="87.0" layoutY="225.0" text="Answer 1 " />
+        <Label fx:id="answer2Label" layoutX="89.0" layoutY="379.0" text="Answer 2" />
+        <Label fx:id="answer3Label" layoutX="89.0" layoutY="531.0" text="Answer 3" />
+        <Button fx:id="verifyUserButton" layoutX="239.0" layoutY="578.0" mnemonicParsing="false" onMousePressed="#verifySecurityQuestions" style="-fx-background-color: #6C5180;" text="Verify User" textFill="WHITE" />
+    </children>
+</Pane>

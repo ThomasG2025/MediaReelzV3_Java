@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="reelzsViewerPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="1350.0" style="-fx-background-color: #966EC8;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.ReelzsViewerController">
+   <children>
+      <Label fx:id="searchReelzsLabel" layoutX="198.0" layoutY="69.0" text="Search Reelz" />
+      <Label fx:id="reelIdLabel" layoutX="180.0" layoutY="424.0" text="Reel Id" />
+      <Label fx:id="reelNameLabel" layoutX="492.0" layoutY="424.0" text="Reel Name" />
+      <Label fx:id="reelArtistLabel" layoutX="850.0" layoutY="424.0" text="Reel Artist" />
+      <Label fx:id="reelYearLabel" layoutX="173.0" layoutY="477.0" text="Reel Year" />
+      <Label fx:id="reelTypeLabel" layoutX="495.0" layoutY="477.0" text="Reel Type" />
+      <Label fx:id="reelGenreLabel" layoutX="848.0" layoutY="477.0" text="Reel Genre" />
+      <TextField fx:id="searchReelzsTextField" layoutX="300.0" layoutY="65.0" onKeyPressed="#standardReelzsSearchMethod" prefHeight="20.0" prefWidth="750.0" />
+      <TextField fx:id="reelNameTextfield" layoutX="580.0" layoutY="420.0" prefHeight="20.0" prefWidth="130.0" />
+      <TextField fx:id="reelYearTextfield" layoutX="235.0" layoutY="473.0" prefHeight="20.0" prefWidth="130.0" />
+      <TextField fx:id="reelArtistTextfield" layoutX="930.0" layoutY="420.0" prefHeight="20.0" prefWidth="130.0" />
+      <TextField fx:id="reelTypeTextfield" layoutX="580.0" layoutY="473.0" prefHeight="20.0" prefWidth="130.0" />
+      <TextField fx:id="reelIdTextfield" layoutX="235.0" layoutY="420.0" prefHeight="20.0" prefWidth="130.0" />
+      <TextField fx:id="reelGenreTextField" layoutX="930.0" layoutY="473.0" prefHeight="20.0" prefWidth="130.0" />
+      <CheckBox fx:id="reelWantStatusCheckbox" layoutX="1097.0" layoutY="477.0" mnemonicParsing="false" text="Want" />
+      <CheckBox fx:id="reelOwnStatusCheckbox" layoutX="1099.0" layoutY="424.0" mnemonicParsing="false" text="Own" />
+      <Button fx:id="addReelButton" layoutX="184.0" layoutY="647.0" mnemonicParsing="false" onAction="#verifyRequiredFieldsAreNotNull" style="-fx-background-color: #6C5180;" text="Add Reel" textFill="WHITE" />
+      <Button fx:id="updateReelButton" layoutX="410.0" layoutY="647.0" mnemonicParsing="false" onAction="#updateReel" style="-fx-background-color: #6C5180;" text="Update Reel" textFill="WHITE" />
+      <Button fx:id="deleteReelButton" layoutX="662.0" layoutY="647.0" mnemonicParsing="false" onAction="#checkNumberOfUserReelIdsWithReelId" style="-fx-background-color: #6C5180;" text="Delete Reel" textFill="WHITE" />
+      <Button fx:id="clearEntryFieldsButton" layoutX="942.0" layoutY="647.0" mnemonicParsing="false" onAction="#clearEntryFields" style="-fx-background-color: #6C5180;" text="Clear Entry Fields" textFill="WHITE" />
+      <TableView fx:id="reelzsTable" layoutX="45.0" layoutY="113.0" onMouseClicked="#getSelectedReel" prefHeight="270.0" prefWidth="1260.0" style="-fx-background-color: #d8d8d8;">
+         <columns>
+            <TableColumn fx:id="reelIdColumn" prefWidth="50.0" text=" Id" />
+            <TableColumn fx:id="reelNameColumn" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="reelArtistColumn" prefWidth="95.0" text="Artist" />
+            <TableColumn fx:id="reelYearColumn" prefWidth="60.0" text=" Year" />
+            <TableColumn fx:id="reelTypeColumn" prefWidth="60.0" text="Type" />
+            <TableColumn fx:id="reelGenreColumn" prefWidth="75.0" text="Genre" />
+            <TableColumn fx:id="reelRatingColumn" prefWidth="60.0" text="Rating" />
+            <TableColumn fx:id="reelIsOriginalColumn" prefWidth="81.0" text="Original" />
+            <TableColumn fx:id="reelNotesColumn" minWidth="6.0" prefWidth="88.0" text="Notes" />
+            <TableColumn fx:id="reelOwnColumn" prefWidth="68.0" text="Own" />
+            <TableColumn fx:id="reelWantColumn" prefWidth="65.0" text="Want" />
+            <TableColumn fx:id="reelLocationNameColumn" prefWidth="103.0" text="Location Name" />
+            <TableColumn fx:id="reelLocationPageNumberColumn" prefWidth="95.0" text="Page Number" />
+            <TableColumn fx:id="reelLocationPageSizeColumn" minWidth="0.0" prefWidth="68.0" text=" Page size" />
+            <TableColumn fx:id="reelLocationSlotNumberColumn" prefWidth="85.0" text="Slot Number" />
+            <TableColumn fx:id="reelDigitallyArchivedColumn" prefWidth="110.0" text="digitally Archived" />
+         </columns>
+      </TableView>
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="1350.0" style="-fx-background-color: #6C5180;">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="batchAddReelzsMenuItem" mnemonicParsing="false" onAction="#advEnter" text="Batch Add Reelzs" />
+                  <MenuItem fx:id="standardExportReelzsMenuItem" mnemonicParsing="false" onAction="#writeCsv" text="Standard Reelzs Export" />
+                  <MenuItem fx:id="cdExportReelzsMenuItem" mnemonicParsing="false" onAction="#cdExport" text="Cd Reelzs Export" />
+                  <MenuItem fx:id="dvdExportReelzsMenuItem" mnemonicParsing="false" onAction="#dvdExport" text="Dvd Reelzs Export" />
+            </items>
+               <graphic>
+                  <Label fx:id="menuBarFileLabel" text="File" textFill="WHITE" />
+               </graphic>
+          </Menu>
+          <Menu fx:id="editMenu" mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="modifyUserMenuItem" mnemonicParsing="false" onAction="#createModifyUserWindow" text="Modify User" />
+            </items>
+               <graphic>
+                  <Label fx:id="menuBarEditLabel" text="Edit" textFill="WHITE" />
+               </graphic>
+          </Menu>
+          <Menu fx:id="helpMenu" mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#createAboutWindow" text="About" />
+            </items>
+               <graphic>
+                  <Label fx:id="menuBarHelpLabel" text="Help" textFill="WHITE" />
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="reelNotesLabel" layoutX="164.0" layoutY="530.0" text="Reel Notes" />
+      <Label fx:id="reelLocationNameLabel" layoutX="438.0" layoutY="530.0" text="Reel Location Name" />
+      <Label fx:id="reelLocationPageNumberLabel" layoutX="785.0" layoutY="530.0" text="Location Page Number" />
+      <TextField fx:id="reelNotesTextfield" layoutX="235.0" layoutY="526.0" prefHeight="20.0" prefWidth="130.0" />
+      <TextField fx:id="reelLocationNameTextField" layoutX="580.0" layoutY="526.0" prefHeight="20.0" prefWidth="130.0" />
+      <TextField fx:id="reelLocationPageNumberTextField" layoutX="930.0" layoutY="526.0" prefHeight="20.0" prefWidth="130.0" />
+      <ChoiceBox fx:id="advancedSearchFiltersChoiceBox" layoutX="1097.0" layoutY="65.0" prefWidth="150.0" />
+      <Label fx:id="reelLocationPageSizeLabel" layoutX="115.0" layoutY="591.0" text="Location Page Size" />
+      <TextField fx:id="reelLocationPageSizeTextField" layoutX="231.0" layoutY="587.0" prefHeight="20.0" prefWidth="130.0" />
+      <Label fx:id="reelLocationSlotNumberLabel" layoutX="428.0" layoutY="583.0" text="Location Slot Number" />
+      <TextField fx:id="reelLocationSlotNumberTextField" layoutX="580.0" layoutY="579.0" prefHeight="20.0" prefWidth="130.0" />
+      <CheckBox fx:id="reelDigitallyArchivedStatusCheckBox" layoutX="1097.0" layoutY="583.0" mnemonicParsing="false" text="Archived" />
+      <CheckBox fx:id="reelIsOriginalCheckBox" layoutX="1097.0" layoutY="530.0" mnemonicParsing="false" text="Reel Original" />
+      <Label fx:id="reelRatingLabel" layoutX="846.0" layoutY="583.0" text="Reel Rating" />
+      <TextField fx:id="reelRatingTextfield" layoutX="930.0" layoutY="579.0" prefHeight="20.0" prefWidth="130.0" />
+   </children>
+</Pane>
