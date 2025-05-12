@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Argon 2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../argon2/JNA/jna-5.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../argon2/argon2-jvm-2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../argon2/argon2-jvm-nolibs-2.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
